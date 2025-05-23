@@ -1,0 +1,23 @@
+1. Pior Caso:
+Pior caso ocorre quando o array está em ordem decrescente, ou seja, é necessário realizar o maior número possível de trocas para que o array fique ordenado.
+
+a. Bubble Sort: O tempo médio registrado foi de 117.80 ms. Possui uma complexidade de tempo O(n²)
+Onde n é o tamanho do array. 
+Por ele percorrer todas as comparações possíveis entre os elementos, ele realiza muitas trocas no pior caso
+
+b. Merge Sort: O tempo médio foi de 44.02 ms. Possui uma complexidade O(n log n).
+Mesmo no pior caso não sofre degradação pois ele sempre divide o array em metades e depois as combina. 
+
+2. Caso Médio:
+No caso médio, o array é embaralhado aleatoriamente, o que representa uma distribuição típica dos elementos no cotidiano.
+
+a. Bubble Sort: O tempo médio registrado foi de 111.99 ms. Sua complexidade O(n²) O tempo de execução no caso médio ainda é relativamente alto,
+pois o algoritmo realiza muitas comparações e trocas desnecessárias, mesmo quando o array está parcialmente ordenado.
+
+b. Merge Sort: O tempo médio foi de 52.59 ms. Sua complexidade O(n log n) O desempenho do Merge Sort no caso médio é mais consistente e ainda superior ao do Bubble Sort.
+
+Conclusão: 
+a. O Merge Sort é claramente superior ao Bubble Sort, tanto no pior caso quanto no caso médio, com um desempenho consideravelmente mais rápido.
+
+b. O Bubble Sort, devido à sua complexidade quadrática, é altamente ineficiente para listas grandes ou em cenários de pior caso, 
+e seus tempos de execução são significativamente maiores quando comparados ao Merge Sort.

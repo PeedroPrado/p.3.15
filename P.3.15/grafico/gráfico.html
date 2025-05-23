@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Comparação P.3.15</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h2>Comparação de Desempenho (ms)</h2>
+  <canvas id="grafico" width="600" height="400"></canvas>
+
+  <script>
+    fetch('resultado.json')
+      .then(res => res.json())
+      .then(dados => {
+        const ctx = document.getElementById('grafico').getContext('2d');
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Pior Caso', 'Caso Médio'],
+            datasets: [
+              {
+                label: 'Bubble Sort',
+                data: [dados.piorCaso.bubble, dados.casoMedio.bubble],
+                backgroundColor: 'red'
+              },
+              {
+                label: 'Merge Sort',
+                data: [dados.piorCaso.merge, dados.casoMedio.merge],
+                backgroundColor: 'blue'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: 'Tempo médio (ms)'
+                }
+              }
+            }
+          }
+        });
+      });
+  </script>
+</body>
+</html>
